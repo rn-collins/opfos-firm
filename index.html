@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One-Person-Firm OS — RN Collins LLC</title>
+  <title>One-Person-Firm OS — Aloha AI</title>
 
   <!-- Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
@@ -89,6 +89,9 @@
     }
 
     .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
       font-family: 'Syne', sans-serif;
       font-weight: 700;
       font-size: 14px;
@@ -739,6 +742,22 @@
     .offer-right .long-copy p { margin-bottom: 20px; }
     .offer-right .long-copy p:last-child { margin-bottom: 0; }
 
+    /* ── ABOUT PORTRAIT ── */
+    .about-rn-portrait {
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+    }
+    .about-rn-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
     /* ── ABOUT RN ── */
     #about-rn {
       background: var(--bg);
@@ -746,7 +765,7 @@
 
     .about-rn-layout {
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 300px 1fr;
       gap: 80px;
       align-items: start;
     }
@@ -1132,7 +1151,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">RN Collins <span>LLC</span></a>
+    <a href="https://aloha-ai-consulting.vercel.app" class="nav-logo" target="_blank" rel="noopener"><span style="font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.6;font-family:DM Mono,monospace;font-weight:400">ALOHA AI · SERVICE</span><span>One-Person-Firm OS</span></a>
     <button class="nav-cta" onclick="openEnrollModal('nav')">Set Up My OS</button>
   </div>
 </nav>
@@ -1440,6 +1459,9 @@
   <div class="container">
     <div class="about-rn-layout">
       <div class="about-rn-sidebar">
+        <div class="about-rn-portrait">
+          <img src="/photo-rn.jpg" alt="Rayven-Nikkita Collins" />
+        </div>
         <p class="section-label">About</p>
         <h3>Rayven-Nikkita Collins</h3>
         <span class="title-line">Founder, RN Collins LLC</span>
@@ -1475,9 +1497,9 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">RN Collins <span>LLC</span></div>
+      <div class="footer-logo">OPFOS · <span>Aloha AI</span></div>
       <div class="footer-copy">
-        © 2026 RN Collins LLC · All rights reserved · <a href="https://rncollins.com" target="_blank" rel="noopener">rncollins.com</a>
+        © 2026 Rayven-Nikkita Collins LLC · All rights reserved · <a href="mailto:collins.ra@northeastern.edu">collins.ra@northeastern.edu</a>
       </div>
     </div>
   </div>
