@@ -1573,8 +1573,8 @@
       </div>
       <div class="modal-success" id="enroll-success">
         <div class="check">✓</div>
-        <h4>You're in!</h4>
-        <p>Redirecting you to complete your enrollment…</p>
+        <h4>You're on the list!</h4>
+        <p>I'll follow up personally by email with next steps, usually within a day.</p>
       </div>
     </div>
   </div>
@@ -1691,17 +1691,12 @@
       document.getElementById('enroll-form-wrap').style.display = 'none';
       document.getElementById('enroll-success').style.display = 'block';
       if (typeof gtag !== 'undefined') gtag('event','enroll_submit',{event_category:'conversion'});
-      setTimeout(function() {
-        window.location.href = 'https://gumroad.com';
-      }, 1500);
+      // Lead captured — no checkout is live yet, so we stay on-page instead of redirecting anywhere.
     })
     .catch(function() {
-      // still redirect on error
+      // Lead capture failed, but keep the same on-page success state — never redirect to a dead end.
       document.getElementById('enroll-form-wrap').style.display = 'none';
       document.getElementById('enroll-success').style.display = 'block';
-      setTimeout(function() {
-        window.location.href = 'https://gumroad.com';
-      }, 1500);
     });
   }
 
